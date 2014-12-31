@@ -1,26 +1,30 @@
+package LinkedLists;
+
 /**
  * Implementation of a stack backed by a singly linked list.
  */
-public class StackByLinkedList<T> {
-	SinglyLinkedList<T> list;
+public class StackByLinkedList extends SinglyLinkedList {
+    SinglyLinkedList list;
 
-	public StackByLinkedList() {
-		list = new SinglyLinkedList<T>();
-	}
+    public StackByLinkedList() {
+	list = new SinglyLinkedList();
+    }
 
-	public StackByLinkedList(T data) {
-		list = new SinglyLinkedList<T>(data);
-	}
+    public StackByLinkedList(int data) {
+	list = new SinglyLinkedList(data);
+    }
 
-	public void push(T data) {
-		list.insertAsHead(data);
-	}
+    public void push(int data) {
+	list.insertAsHead(data);
+    }
 
-	public T pop() {
-		return list.removeHead();
-	}
+    public int pop() {
+	Node popped = list.head;
+	list.head = list.head.next;
+	return popped.data;
+    }
 
-	public T top() {
-		return list.getHead();
-	}
+    public int top() {
+	return list.head.data;
+    }
 }

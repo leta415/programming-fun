@@ -1,3 +1,5 @@
+package LinkedLists;
+
 import java.util.Map;
 import java.util.HashMap;
 import java.util.Stack;
@@ -6,7 +8,10 @@ import java.util.Stack;
  * Class that represents a singly linked list. 
  */
 public class SinglyLinkedList {
-   Node head = null;
+   protected Node head = null;
+   public Node getHead() {
+       return head;
+   }
    int size = 0;
 
    /** Class to represent each element in a SinglyLinkedList. */
