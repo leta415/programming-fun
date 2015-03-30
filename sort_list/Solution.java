@@ -1,4 +1,3 @@
-
  /* Definition for singly-linked list.*/
   class ListNode {
       int val;
@@ -8,8 +7,10 @@
           next = null;
       }
   }
- 
+
+/* Sort a linked list in O(n log n) time using constant space complexity. */
 public class Solution {
+
     public static ListNode sortList(ListNode head) {
         if (head == null || head.next == null) {
             return head;
@@ -25,7 +26,7 @@ public class Solution {
         return merge(left, right);
     }
 
-
+    // Find and return middle element in a list.
     private static ListNode findMid(ListNode head) {
         // System.out.println("inside findMid()");
         ListNode slow = head;
